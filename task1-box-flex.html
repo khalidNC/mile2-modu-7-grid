@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Simple Flex Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box-container {
+            border: 5px solid black;
+            height: 90vh;
+            margin: 15px;
+            border-radius: 8px;
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            height: 90vh;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5em;
+            border-radius: 8px;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+
+        .box-right {
+            background-color: antiquewhite;
+            margin-left: 0px;
+        }
+
+
+        @media screen and (max-width: 576px) {
+            .boxes {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 3fr;
+            }
+
+            .box-right {
+                margin-left: 10px;
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-container">
+        <div class="boxes">
+            <div class="box">Left</div>
+            <div class="box box-right">Right</div>
+        </div>
+    </div>
+</body>
+
+</html>
