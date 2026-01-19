@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Paragraph Grid</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .image-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .image-card img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            display: block;
+        }
+
+        .first-image {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .second-image {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .content-card {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .content-card p {
+            text-align: justify
+        }
+
+        .first-content-card {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .second-content-card {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .first-image, .first-content-card, .second-image, .second-content-card {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-card first-image"><img src="./images/task4-card-responsive2.jpg" alt=""></div>
+        <div class="content-card first-content-card">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid voluptas suscipit rerum officiis amet excepturi illum sint voluptatem harum, accusamus ea pariatur labore eaque nihil sapiente, provident, fugit molestias animi exercitationem. Animi exercitationem laudantium vero tenetur fugiat? Quo dignissimos magnam dolorum est voluptatibus aspernatur tempore necessitatibus fuga possimus sit ea laborum eveniet obcaecati ipsum expedita iure neque rerum quis, iste voluptas itaque? Dolorum soluta ducimus voluptatum id molestiae? Animi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident mollitia illum ipsum dolor, aspernatur libero impedit sed adipisci quibusdam facilis eaque quam rem nesciunt animi voluptatum necessitatibus repellat voluptatibus fugit hic. Neque provident delectus, itaque quibusdam tempore nostrum facere sapiente?</p>
+        </div>
+        <div class="image-card second-image"><img src="./images/task4-card-responsive1.jpg" alt=""></div>
+        <div class="content-card second-content-card">
+            <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur deleniti quam provident optio vero molestias culpa nostrum, error tempora adipisci sequi magni excepturi alias accusantium doloremque vitae voluptatibus reprehenderit voluptatem dolorem assumenda minima. Debitis nihil harum neque iste dolores necessitatibus et dicta quae eligendi rerum laboriosam sit perspiciatis rem reprehenderit possimus mollitia, dignissimos numquam earum vitae tenetur at. Eaque.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ducimus dignissimos sit rem excepturi placeat perspiciatis? Possimus, totam vero. Repellat obcaecati nemo totam voluptatum dicta autem nobis eveniet delectus, aliquam nisi neque eius eum ad id, tempore ab provident incidunt laboriosam sunt iure quo adipisci! Minus eius ullam doloremque eos!</p>
+        </div>
+    </div>
+</body>
+
+</html>
